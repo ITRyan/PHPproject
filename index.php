@@ -1,21 +1,12 @@
-<?php
-include 'auth.php';
-include 'tasks.php';
-
-// Example usage
-if (isset($_POST['login'])) {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-
-    if (login($username, $password)) {
-        // Successful login, redirect or display a message
-        header('Location: dashboard.php');
-        exit;
-    } else {
-        // Failed login, display an error message
-        $login_error = "Invalid username or password";
-    }
-}
-
-// Similarly, you can use addTask() and getTasks() functions for task-related operations
-?>
+<?php include("includes/header.php"); ?>
+<div class="py-5">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>POS system in PHP MySQL</h1>
+                <a herf="login.php" class="btn btn-primary mt-4">Login</a>
+            </div>
+        </div>
+    </div>
+</div>
+<?php include("includes/footer.php"); ?>
