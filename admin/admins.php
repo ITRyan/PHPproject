@@ -1,4 +1,9 @@
-<?php include('includes/header.php') ?>
+<?php
+// Assuming you have a function to fetch admin data from the database
+$admins = getAdminsFromDatabase();
+
+include('includes/header.php');
+?>
 
 <div class="container-fluid px-4">
     <div class="card">
@@ -20,16 +25,22 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td></td>
-                        </tr>
+                        <?php foreach ($admins as $admin): ?>
+                            <tr>
+                                <td><?= $admin['id']; ?></td>
+                                <td><?= $admin['name']; ?></td>
+                                <td><?= $admin['email']; ?></td>
+                                <td>
+                                    <!-- Add action buttons/links here -->
+                                    <!-- Example: <a href="edit-admin.php?id=<?= $admin['id']; ?>">Edit</a> -->
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
-
 </div>
 
-
-<?php include('includes/footer.php') ?>
+<?php include('includes/footer.php'); ?>
