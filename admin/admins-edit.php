@@ -3,7 +3,7 @@
 <div class="container-fluid px-4">
     <div class="card">
         <div class="card-header">
-            <h4 class="mb-0">Admins/Staff
+            <h4 class="mb-0">Edit Admins
                 <a href="admins-create.php" class="btn btn-primary float-end">Add Admin</a>
             </h4>
         </div>
@@ -38,7 +38,7 @@
                                     <td><?= $adminItem['name'] ?> </td>
                                     <td><?= $adminItem['email'] ?> </td>
                                     <td>
-                                        <a herf="admins-edit.php? " class="btn btn-success btn-sm">Edit</a>
+                                        <a herf="admins-edit.php? id=<?=$adminItem['id']?>" class="btn btn-success btn-sm">Edit</a>
                                         <a herf='admins-delete.php' class="btn btn-danger btn-sm">Delete</a>
                                     </td>
                                 </tr>
